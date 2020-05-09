@@ -23,11 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h7_uupdc_!*&3ok(awqcoi*)@&@6p&dzj6cju)uqz-k@=d-98d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
-#ALLOWED_HOSTS = ['3.250.116.191']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['almastudio.herokuapp.com','127.0.0.1']
 
 # Application definition
 
