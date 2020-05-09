@@ -125,14 +125,11 @@ STATIC_URL = '/static/'
 
 #STATIC_ROOT = os.path.join(BASE_DIR, "static")
 #STATIC_ROOT = "/opt/bitnami/apps/django/django_projects/almastudio.com/static/"
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
      os.path.join(BASE_DIR, "static"),
-    '/opt/bitnami/apps/django/django_projects/almastudio/static/',
 ]
-
-
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
