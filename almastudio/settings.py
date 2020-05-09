@@ -146,7 +146,7 @@ TEMPLATE_DIRS = (
 #f.write(STATIC_URL+'vendor/bootstrap/css/bootstrap.min.css')
 #f.close()
 #'/opt/bitnami/apps/django/django_projects/almastudio/static/',
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'lab4django@gmail.com'
