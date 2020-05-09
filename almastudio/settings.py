@@ -27,7 +27,7 @@ SECRET_KEY = 'h7_uupdc_!*&3ok(awqcoi*)@&@6p&dzj6cju)uqz-k@=d-98d'
 DEBUG = False
 
 ALLOWED_HOSTS = ['almastudio.herokuapp.com','127.0.0.1']
-               
+
 
 # Application definition
 
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'almastudio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
