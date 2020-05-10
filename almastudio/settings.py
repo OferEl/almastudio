@@ -27,6 +27,8 @@ SECRET_KEY = 'h7_uupdc_!*&3ok(awqcoi*)@&@6p&dzj6cju)uqz-k@=d-98d'
 DEBUG = False
 
 ALLOWED_HOSTS = ['almastudio.herokuapp.com']
+#ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
