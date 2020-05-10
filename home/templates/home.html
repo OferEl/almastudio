@@ -47,6 +47,50 @@
                 <p class="masthead-subheading font-weight-light mb-0"> Python, Django and Data</p>
             </div>
         </header>
+       <!-- Contact Section-->
+        <section class="page-section bg-primary text-white mb-0" id="contact" >
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">צור קשר</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <!-- Contact Section Form-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form action="/contactus/" method="post" id="contactForm" name="sentMessage" >
+                             {% csrf_token %}
+                            <div class="form-group">
+                                  <label for="id_email_name">שם</label>
+                                  <input type="text" class="form-control" id="id_email_name" name="email_name" >
+                             </div>
+
+                            <div class="form-group">
+                                  <label for="id_email_email">כתובת מייל</label>
+                                  <input type="email" class="form-control" id="id_email_email" name="email_email" placeholder="name@example.com">
+                             </div>
+
+                            <div class="form-group">
+                                  <label for="id_email_phone">טלפוון</label>
+                                  <input type="text" class="form-control" id="id_email_phone" name="email_phone" placeholder="050">
+                             </div>
+
+                             <div class="form-group">
+                                  <label for="id_email_text">תוכן ההודעה</label>
+                                  <textarea name="email_text" class="form-control" cols="40" rows="10" required id="id_email_text"></textarea>
+                             </div>
+
+                            <div class="form-group"><button class="btn btn-secondary btn-xl" id="sendMessageButton" type="submit">שלח</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     <footer class="footer text-center">
             <div class="container">
                 <div class="row">
