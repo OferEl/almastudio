@@ -26,10 +26,10 @@ SECRET_KEY = 'h7_uupdc_!*&3ok(awqcoi*)@&@6p&dzj6cju)uqz-k@=d-98d'
 #DEBUG = True
 DEBUG = False
 
-DEBUG_PROPAGATE_EXCEPTIONS=True
-
 ALLOWED_HOSTS = ['almastudio.herokuapp.com']
 #ALLOWED_HOSTS = []
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
+
 
 # Application definition
 
