@@ -17,7 +17,38 @@
         <link rel="stylesheet" type="text/css" href="{% static 'home/styles.css' %}" />
     </head>
     <body id="page-top">
-    <section class="page-section portfolio" id="blog">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#blog">בלוג</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">מי אנחנו</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">צור קשר</a></li>
+                    </ul>
+                </div>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Django Lab  </a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" /><!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Django</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-"> האתר לקידום דג'נגו בישראל  </p>
+                <p class="masthead-subheading font-weight-light mb-0"> Python, Django and Data</p>
+            </div>
+        </header>
+        <!-- blog Section-->
+        <section class="page-section portfolio" id="blog">
             <div class="container">
                 <!-- blog Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">בלוג</h2>
@@ -54,37 +85,69 @@
 
             </div>
         </section>
-      <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
-
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#blog">בלוג</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">מי אנחנו</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">צור קשר</a></li>
-                    </ul>
-                </div>
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Django Lab  </a>
-            </div>
-        </nav>
-     <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" /><!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Django</h1>
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Django Lab</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-"> האתר לקידום דג'נגו בישראל  </p>
-                <p class="masthead-subheading font-weight-light mb-0"> Python, Django and Data</p>
+                <!-- About Section Content-->
+                <div class="row">
+                    <p class="text-justify text-wrap">שמי עופר ואני מפתח תוכנה ומנהל פרוייקטים בכיר, כיום אני מפתח תוכנה נלהב שעובד עם פייתון דג'אנגו והמון דאטה.<br>
+                     יצרתי את הבלוג הזה כדי לשתף קצת מהמחשבות והניסיון שלי ובעיקר מיכוון שאני מאוד מאמין שהעולם המרתק הזה עדיין בתחילתו והיכולות של הפלטפורמה המדהימה הזו הן מאוד רחבות.<br>
+                       הבלוג ינסה להציג על קצה המזלג פתרונות ודוגמאות שבהם אני נתקל תוך דגש על שילוב הפלטפורמה יחד עם נושאי חדשנות מובילים המאפשרים להרחיב את הפתרון הטכנולוגי.<br>
+                     מעבר לכתיבת הבלוג אשמח לשיתופי פעולה ורעיונות נוספים בעולם Django&Python&Data</p>
+                </div>
+                <!-- About Section Button-->
+
             </div>
-        </header>
-       <!-- Contact Section-->
+        </section>
+        <!--services section -->
+        <section class="page-section portfolio" id="services">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">השירות שלנו</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- services Grid Items-->
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="{% static 'blog/15.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 style="text-align:right;color:Tomato;">שיתופי פעולה</h4>
+                            <h5 style="text-align:right"> מוזמנים לפנות אלינו לבחינת שיתופי פעולה אפשריים ולכול רעיון ומיזם</h5>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'blog/8.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 style="text-align:right;color:Tomato;">יעוץ ולימוד</h4>
+                            <h5 style="text-align:right">העברת ידע, הכשרה,לימוד אישי וקבוצתי וייעוץ בהקמה ותפעול</h5>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'blog/2.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 style="text-align:right;color:Tomato;">פורום לשאלות ותשובות</h4>
+                            <h5 style="text-align:right"> פורום לשיתוף מידע והעלאת סוגיות ושאלות. <br>אנו נשתדל לענות בהקדם </h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section-->
         <section class="page-section bg-primary text-white mb-0" id="contact" >
             <div class="container">
                 <!-- Contact Section Heading-->
@@ -128,48 +191,8 @@
                 </div>
             </div>
         </section>
-
-    <!--services section -->
-        <section class="page-section portfolio" id="services">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">השירות שלנו</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- services Grid Items-->
-                <div class="card-deck">
-                    <div class="card">
-                        <img src="{% static 'blog/15.jpg' %}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 style="text-align:right;color:Tomato;">שיתופי פעולה</h4>
-                            <h5 style="text-align:right"> מוזמנים לפנות אלינו לבחינת שיתופי פעולה אפשריים ולכול רעיון ומיזם</h5>
-
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'blog/8.jpg' %}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 style="text-align:right;color:Tomato;">יעוץ ולימוד</h4>
-                            <h5 style="text-align:right">העברת ידע, הכשרה,לימוד אישי וקבוצתי וייעוץ בהקמה ותפעול</h5>
-
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="{% static 'blog/2.jpg' %}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4 style="text-align:right;color:Tomato;">פורום לשאלות ותשובות</h4>
-                            <h5 style="text-align:right"> פורום לשיתוף מידע והעלאת סוגיות ושאלות. <br>אנו נשתדל לענות בהקדם </h5>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <footer class="footer text-center">
+        <!-- Footer-->
+        <footer class="footer text-center">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
