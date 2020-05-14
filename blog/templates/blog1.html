@@ -6,8 +6,6 @@
 .copyright{
   background-color: #3c3c3c;
 }
-
-
 </style>
 {% endblock %}
 {% block content %}
@@ -23,24 +21,25 @@
 
 <div class="container">
 
-
+    <div class="row">
         {% for blog in object_list %}
-    <div class="row" >
-         <div class="col-8">
-             <h5>{{ blog.blog_title }} </h5>
-             <p>{{ blog.blog_desc }}</p>
-
-         </div>
-
-        <div class="col-4">
-        <img src="{% static 'blog/2.jpg' %}" class="align-self-center mr-3" alt="...">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{% static 'blog/2.jpg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ blog.blog_title }}</h5>
+                        <p class="card-text">{{ blog.blog_text }}</p>
+                    </div>
+                    <a href="#" class="btn btn-link">המשך לקרוא</a>
+                </div>
+            </div>
         </div>
-
-
-    </div>
-    <br></br>
+        <br></br>
         {% endfor %}
-
+    </div>
 </div>
     <!-- Copyright Section-->
         <section class="copyright text-center text-white ">
