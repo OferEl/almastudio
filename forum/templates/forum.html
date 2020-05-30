@@ -1,0 +1,121 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="jumbotron jumbotron-fluid text-center" style ="background-color:#1ABC9C; color: white;">
+        <div class="container">
+            <h1 class="display-4">Django Forum</h1>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row" >
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm">
+            שאל את הפורום
+        </button>
+    </div>
+</div>
+<div class="container" >
+    {% for forum in object_list %}
+    <div class="row" >
+        <div class="col-10">
+            <div class="col align-self-center">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>{{ forum.forum_title }}</p>
+                        <footer class="blockquote-footer">Someone famous in </footer>
+                    </blockquote>
+                    <span class="badge badge-primary badge-pill">1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- pagination-->
+
+</div>
+
+<!-- pagination -->
+<div class="container" align="center">
+
+    <ul class="pagination">
+         {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page=1"> &laquo; first</a>
+            <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}"> &laquo; previous</a>
+            <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+
+
+        <li class="page-item">
+            <p class="page-link">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </p>
+        </li>
+
+        {% if page_obj.has_next %}
+
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}"> &laquo; next</a>
+            <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}"> &laquo; last</a>
+            <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+
+
+        {% endif %}
+
+
+    </ul>
+
+</div>
+
+
+<!-- form for new question-->
+<div id="ModalLoginForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">שאל את הפורום</h1>
+            </div>
+            <div class="modal-body">
+                <form action= "{% url 'forum:topic'  %}"  role="form" method="POST" id="massege">
+                    {% csrf_token %}
+                    <input type="hidden" name="_token" value="">
+                    <div class="form-group">
+                        <label class="control-label">כותרת</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="forum_title" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">תוכן</label>
+                        <div>
+                            <textarea class="form-control" name="forum_text" placeholder="Required example textarea" ></textarea>
+                        </div>
+                        <p>ניתן להרחיב את שדה ההזנה</p>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-success">שלח</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{% endblock %}"

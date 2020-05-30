@@ -15,6 +15,7 @@ class Blog (models.Model):
     blog_text = models.TextField(default='none')
     blog_date = models.DateField(auto_now_add=True)
     blog_order = models.IntegerField(default=1)
+    blog_pic = models.CharField(max_length=50,default='none')
 
     def __unicode__(self):
         return self.post_id

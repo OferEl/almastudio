@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header %}
+<style>
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.con {
+  position: relative;
+  text-align: center;
+  color: white;
+</style>
+
+{% endblock %}
+{% block content %}
+ <!--navber -->
+ {% include "navblog.html" %}
+  <!-- Page Header -->
+<div class="con">
+  <img src="{% static 'blog/django.jpg' %}" style="width:100%;">
+  <div class="center">
+    <h1>django</h1>
+  </div>
+</div>
+
+
+
+<article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <br>
+          <p class="text-right">
+            Django הינה framework של שפת פיתון המבוססת קוד פתוח ומשמשת לפיתוח מהיר, עיצוב פרגמטי, בר-תחזוקה, נקי ומאובטח, וכל זאת תוך שמירה על עקרונות פיתוח מתקדמים.
+          </p>
+
+          <h2 class="section-heading" style="text-align: right;"> ארכיטקטורת MVC</h2>
+
+          <p class="text-right">  מכיוון ש django מבוססת Python היא נבנתה על בסיס ארכיטקטורת ה MVC המתארת טכניקה לחלוקת היישום לשלושה חלקים, מודל, תצוגה ובקר.</p>
+
+          <p class="text-right">  ארכיטקטורה זו מאפשרת להפחית למינימום את התלות ההדדית בין החלקים השונים ומאפשרת לפתח באופן בלתי-תלוי את הרכיבים ביישום.</p>
+
+          <blockquote class="blockquote" style="text-align: right;">
+            ארכיטקטורה זו בא לידי ביטוי ב Django ע"י הרכיבים Model-View-Template<br>
+              ולכן הארכיטקטורה זו  ב Django נקראת MVT.
+          </blockquote>
+
+
+          <h2 class="section-heading" style="text-align: right;">פילוספיית ה DRY</h2>
+          <p class="text-right">
+            הפילוסופיה של DRY (אל תחזור על עצמך) המתקיימת ב Django היא המסייעת למפתחים להשיג את עקרון הפיתוח המהיר.
+             Django מאפשרת לעבוד על מספר רב של ישוממים מבלי לכתוב את הקוד בכל פעם מאפס.
+היכולת להשתמש בקוד קיים עבור ישומיים שונים תוך שמירה על אותנטיות והתכונות הייחודיות בכל יישום .
+          </p>
+
+          <a href="#" >
+            <img class="img-fluid" src="{% static 'blog/13.png' %}" alt="">
+          </a>
+
+
+          <h2 class="section-heading" style="text-align: right;">פשטות וקלות.</h2>
+          <p class="text-right">
+            Django מבוססת על שפת התכנות של Python שכיום היא השפה הפופולרית ביותר והוגדרה ע"י רוב המפתחים כשפה הקלה ביותר ללימוד.
+            Django מתוחזקת על ידי קהילה גדולה של מפתחים והמשמעות היא שאנו יכולים למצוא תשובות לבעיות בקלות ובמהירות.
+          </p>
+
+          <h2 class="section-heading" style="text-align: right;">אבטחה</h2>
+          <p class="text-right">
+            אחת היתרונות הגדולים ביותר כיום של django למול מתחריה היא מערכת האבטחה המתקדמת המובנת בה, וחוסכת לנו כמפתחים את הצורך ליישם תכונות אבטחה בצורה ידנית.
+            תיקוני אבטחה תכופים משולבים בגרסאות המופצות ע"י Django וזאת בהתאם להתפתחות הטכנולוגית בתחום כדי להבטיח כי כל תקני האבטחה העדכניים מיושמים.
+          </p>
+
+          <h2 class="section-heading" style="text-align: right;">אלו ישומיים מתאים לבנות בעזרת Django</h2>
+          <ul class="list-styled" style="text-align: right;">
+              <li> ישומיים מבוססי לקוח - CRM.</li>
+              <li> ישומיים מבוססי דאטה הכוללים יכולות אנליטיקה מתקדמות.</li>
+              <li> Django  לעומת מתחריה מיועדת לישומיים בסדר גודל בינוני וגדול ופחות מתאימה ליישומים קטנים. Django מאפשרת לבנות ישומיים מגוונים:
+              </li>
+              <li>ישומיי קניות</li>
+              <li>ישומיי אדמינסטרציה למערכות תפעוליות.</li>
+              <li>ישומיי לימוד מכונה (Machine learning)</li>
+              <li> ישומיי בלוג</li>
+          </ul>
+
+           <h2 class="section-heading" style="text-align: right;">קהילה</h2>
+          <p class="text-right">
+            קהילת Django היא אחת הקהילות הגדולות והטובות ביותר כיום ומנוהלת על ידי קרן התוכנה של Django .
+            לינקים לקהילות ואתרי ידע מובילים,
+
+              <br><a href="https://www.djangoproject.com/community/">djangoproject</a><br>
+
+              <a href="https://www.codementor.io/community/topic/django">codementor</a><br>
+              <a href="https://djangopackages.org/">djangopackages</a><br>
+              <a href="https://ccbv.co.uk/">ccbv</a>
+
+
+
+          </p>
+
+           <h2 class="section-heading" style="text-align: right;"> החברות שאימצו את פלטפורמת Django</h2>
+
+          <img src="{% static 'blog/django_uses.png' %}" style="width:100%;">
+
+
+
+          <p class="text-right">Lab4Django
+
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+
+{% endblock %}

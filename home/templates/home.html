@@ -7,7 +7,8 @@
         <meta name="description" content="django israel" />
         <meta name="keywords" content="django, python,django israel, דגאנגו">
         <meta name="author" content="ofer elzam-toporik" />
-        <title>Django - all about django</title>
+        <link rel="shortcut icon" href="{% static 'home/logo.png' %}">
+        <title>Lab4Django</title>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -19,20 +20,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#blog">בלוג</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">מי אנחנו</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services">השירות שלנו</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">צור קשר</a></li>
-                    </ul>
-                </div>
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Django Lab  </a>
-            </div>
-        </nav>
+           {% include "navhome.html" %}
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
@@ -123,7 +111,7 @@
                 <!-- services Grid Items-->
                 <div class="card-deck">
                     <div class="card">
-                        <img src="{% static 'blog/15.jpg' %}" class="card-img-top" alt="...">
+                        <img src="{% static 'blog/3.jpg' %}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4 style="text-align:right;color:Tomato;">שיתופי פעולה</h4>
                             <h5 style="text-align:right"> מוזמנים לפנות אלינו לבחינת שיתופי פעולה אפשריים ולכול רעיון ומיזם</h5>
@@ -131,7 +119,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="{% static 'blog/8.jpg' %}" class="card-img-top" alt="...">
+                        <img src="{% static 'blog/learn.jpg' %}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4 style="text-align:right;color:Tomato;">יעוץ ולימוד</h4>
                             <h5 style="text-align:right">העברת ידע, הכשרה,לימוד אישי וקבוצתי וייעוץ בהקמה ותפעול</h5>
@@ -139,7 +127,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="{% static 'blog/2.jpg' %}" class="card-img-top" alt="...">
+                        <img src="{% static 'blog/ask.png' %}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4 style="text-align:right;color:Tomato;">פורום לשאלות ותשובות</h4>
                             <h5 style="text-align:right"> פורום לשיתוף מידע והעלאת סוגיות ושאלות. <br>אנו נשתדל לענות בהקדם </h5>

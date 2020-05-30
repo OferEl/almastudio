@@ -6,49 +6,63 @@
 .copyright{
   background-color: #3c3c3c;
 }
-
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.con {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
 </style>
+
 {% endblock %}
 {% block content %}
-<section >
-    <div class="jumbotron jumbotron-fluid text-center" style ="background-color:#1ABC9C; color: white;">
-        <div class="container">
-            <h1 class="display-4">Django בלוג</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
+{% include "navblog.html" %}
+
+<div class="con">
+    <img src="{% static 'blog/pic2.jpg' %}" style="width:100%;">
+    <div class="center">
+        <h1>Django Blog</h1>
     </div>
-</section>
+</div><br>
+
 
 
 <div class="container">
 
-
-        {% for blog in object_list %}
+    {% for blog in object_list %}
     <div class="row" >
-         <div class="col-8">
-             <h5>{{ blog.blog_title }} </h5>
-             <p>{{ blog.blog_desc }}</p>
+        <div class="col-8">
+            <h5>{{ blog.blog_title }} </h5>
+            <p>{{ blog.blog_desc }}</p>
+            {% static  blog.blog_pic  as pic %}
 
-         </div>
-
-        <div class="col-4">
-        <img src="{% static 'blog/2.jpg' %}" class="align-self-center mr-3" alt="...">
         </div>
 
+        <div class="col-4">
+            <a href={{blog.object}}>
+            <img src="{{pic}}" class="align-self-center mr-3" alt="...">
+                </a>
+            {{blog.object}}
+        </div>
 
     </div>
     <br></br>
-        {% endfor %}
+    {% endfor %}
 
 </div>
-    <!-- Copyright Section-->
-        <section class="copyright text-center text-white ">
-            <div class="container"><small>Copyright © Django Lab 2020</small></div>
-        </section>
+<!-- Copyright Section-->
+<section class="copyright text-center text-white ">
+    <div class="container"><small>Copyright © Django Lab 2020</small></div>
+</section>
 
 {% endblock %}
- {% block footer %}
+{% block footer %}
 
 
- {% endblock %}
+{% endblock %}
