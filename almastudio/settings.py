@@ -23,13 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h7_uupdc_!*&3ok(awqcoi*)@&@6p&dzj6cju)uqz-k@=d-98d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['almastudio.herokuapp.com','127.0.0.1','lab4django.herokuapp.com']
+ALLOWED_HOSTS = ['lab4django.herokuapp.com']
 #ALLOWED_HOSTS = ['*']
 
-
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE= True
 
 # Application definition
 
