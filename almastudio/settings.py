@@ -29,7 +29,7 @@ DEBUG = True
 #ALLOWED_HOSTS = ['lab4django.herokuapp.com']
 ALLOWED_HOSTS = ['*']
 
-CSRF_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
 #SESSION_COOKIE_SECURE= True
 CSRF_COOKIE_DOMAIN = 'django-labs.herokuapp.com'
 
