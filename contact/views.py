@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
-@csrf_protect
+
 class Contactus(FormView):
     template_name = 'contactus.html'
     form_class = Contact
