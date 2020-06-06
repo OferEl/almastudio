@@ -153,7 +153,8 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form action="/contactus/" method="post" id="contactForm" name="sentMessage" > {% csrf_token %}
+                        <form action="/contactus/" method="POST" id="contactForm" name="sentMessage" >
+                            {% csrf_token %}
                             <div class="form-group">
                                   <label for="id_email_name">שם</label>
                                   <input type="text" class="form-control" id="id_email_name" name="email_name" >
