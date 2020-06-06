@@ -3,7 +3,7 @@ from django.views.generic import FormView
 from .forms import Contact
 from django.core.mail import send_mail
 # Create your views here.
-
+@csrf_protect
 class Contactus(FormView):
     template_name = 'contactus.html'
     form_class = Contact
