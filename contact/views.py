@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic import FormView
 from .forms import Contact
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_protect
+
 # Create your views here.
 @csrf_protect
 class Contactus(FormView):
