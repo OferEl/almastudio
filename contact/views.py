@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.views.generic import FormView
 from .forms import Contact
 from django.core.mail import send_mail
-from django.views.decorators.csrf import csrf_protect
+from django.utils.decorators import method_decorator
+
 
 # Create your views here.
 
@@ -10,6 +11,10 @@ class Contactus(FormView):
     template_name = 'contactus.html'
     form_class = Contact
     success_url = '/contactus/'
+
+
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
     def sendmail(self,name, to, phone, text):
         send_mail(
