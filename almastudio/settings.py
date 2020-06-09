@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h7_uupdc_!*&3ok(awqcoi*)@&@6p&dzj6cju)uqz-k@=d-98d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
 #ALLOWED_HOSTS = ['lab4django.herokuapp.com']
 ALLOWED_HOSTS = ['*']
@@ -146,11 +146,14 @@ TEMPLATE_DIRS = (
 #'/opt/bitnami/apps/django/django_projects/almastudio/static/',
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'lab4django@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'oferel@zohomail.com'
 EMAIL_HOST_PASSWORD = 'alma2007!'
 EMAIL_PORT = 587
+EMAIL_USE_SSL = False
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'oferel@zohomail.com'
 
 #MEDIA_ROOT is for server path to store files in the computer.
 #MEDIA_URL is the reference URL for browser to access the files over Http.

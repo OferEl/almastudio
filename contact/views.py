@@ -17,11 +17,12 @@ class Contactus(FormView):
         return super().dispatch(*args, **kwargs)
 
     def sendmail(self,name, to, phone, text):
+        message = 'אנו ניצור קשר בהקדם , תודה צוות django-lab.' + '   הפרטים המצורפים ' +phone + '  -  '+ text
         send_mail(
-            'תודה שפנית אלינו',
-            'אנו ניצור קשר בהקדם , תודה צוות labdajgo.',
-            'lab4django@gmail.com',
-            [to , 'lab4django@gmail.com',],
+            ['תודה שפנית אלינו'],
+            message,
+            'oferel@zohomail.com',
+            [to , 'oferel1@gmail.com'],
             fail_silently=False,
         )
 
